@@ -3,7 +3,7 @@ session_start();
 $userName='';
 $email='';
 $errors=array();
-$db=mysqli_connect("localhost","root", "","register");
+$db=mysqli_connect("localhost","root", "","register"); // povezivanej sa bazom podataka 
 // Provjera nakon sto je kliknuto dugme da li su svi inputi popunjeni 
 if(isset($_POST['submit'])){
     // Kodiranje unosa
@@ -68,7 +68,7 @@ if(empty($username)){
 
 }
 if (count($errors) == 0) {
-    $password3=md5($password1);
+    $password3=md5($password1);// ne radi kada se ovako unosi 
     $query = "SELECT * FROM user WHERE username='$username' AND password='$password3'";
     $results = mysqli_query($db, $query);
     if (mysqli_num_rows($results) == 1) {
