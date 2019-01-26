@@ -57,7 +57,7 @@ if(count($errors) == 0){
 if(isset($_POST['login'])){
     // Kodiranje unosa
     $username=mysqli_real_escape_string($db, $_POST['username']);
-    $password1=mysqli_real_escape_string($db, $_POST['password']);
+    $password1= $_POST['password'];
    
 // Ukoliko je polje prazno dodajmo poruku u niz errors
 if(empty($username)){
@@ -68,8 +68,8 @@ if(empty($username)){
 
 }
 if (count($errors) == 0) {
-    $password3=md5($password1);// ne radi kada se ovako unosi 
-    $query = "SELECT * FROM user WHERE username='$username' AND password='$password3'";
+    // ne radi kada se ovako unosi 
+    $query = "SELECT * FROM user WHERE username='$username' AND password='$password1'";
     $results = mysqli_query($db, $query);
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $username;
