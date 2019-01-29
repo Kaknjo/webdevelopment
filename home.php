@@ -7,6 +7,7 @@ if(!isset($_SESSION['username'])): ?>
 header('location: index.php');
 endif ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,5 +17,12 @@ endif ?>
     <title>Document</title>
 </head>
 <body>
-    <p> Welcome <?php echo $_SESSION['username']; ?> </body>
+    <p> Welcome <?php echo $_SESSION['username']; ?></p>
+    <form  action="logout.php" method="POST">
+        <button type="submit" name="logout">Logout</button>  
+    </form>
+    
+</body>
+
+    
 </html>
