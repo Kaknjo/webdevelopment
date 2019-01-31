@@ -1,0 +1,40 @@
+
+body{
+    background-color:#f3f3f3;
+    font-family:Arial;
+}
+
+.container{
+    width:600px;
+    background-color: white;
+    padding:20px;
+}
+.items{
+    padding-bottom:30px;
+    width:100%;
+}
+input{
+    padding:0px 20px;
+    width:340px;
+    height:40px;
+}
+button{
+    width:100px;
+    height:44px;
+}
+
+
+
+.header{
+    height:30px;
+    background-color:lightblue; 
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    color:white;
+}
+#home{
+    text-decoration: none;
+    color:white;
+    margin-right:20px;
+}
